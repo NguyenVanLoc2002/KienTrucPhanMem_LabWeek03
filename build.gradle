@@ -1,0 +1,23 @@
+plugins {
+    id 'java'
+}
+
+group = 'org.example'
+version = '1.0-SNAPSHOT'
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    testImplementation platform('org.junit:junit-bom:5.9.1')
+    testImplementation 'org.junit.jupiter:junit-jupiter'
+    implementation 'guru.nidi:jdepend:2.9.5'
+    implementation 'com.github.javaparser:javaparser-core:3.25.8'
+    implementation 'com.googlecode.json-simple:json-simple:1.1.1'
+
+}
+
+test {
+    useJUnitPlatform()
+}
